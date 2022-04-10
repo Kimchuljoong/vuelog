@@ -10,10 +10,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#"><router-link to="/">Home</router-link></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#"><router-link to="/list">List</router-link></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Pricing</a>
@@ -26,19 +26,15 @@
       </div>
     </nav>
 
-    <div class="container mt-4">
-      <h5>블로그 입니다.</h5>
-      <p>- vue로 만든 블로그 -</p>
-    </div>
+    <router-view :blogData="blogData"></router-view>
 
-    <List :blogData="blogData"/>
+<!--    <List :blogData="blogData"/>-->
 
   </div>
 </template>
 
 <script>
 
-import List from "@/components/List";
 import blogData from "./assets/blog.js";
 
 export default {
@@ -49,7 +45,6 @@ export default {
     }
   },
   components: {
-    List : List,
   },
 }
 </script>

@@ -4,11 +4,11 @@
       <h5>{{ blog.title }}</h5>
       <p>{{ blog.date }}</p>
     </div>
-
   </div>
 </template>
 
 <script>
+
 export default {
   name: "List",
   data() {
